@@ -1,0 +1,21 @@
+
+
+/**
+ * Equal-width navigation (http://jsfiddle.net/csswizardry/zfSt4/)
+ */
+.oc-menu {
+    display: table;
+    margin:  0;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+    table-layout: fixed;
+}
+
+.oc-menu__item {
+    display: table-cell;
+
+    a {
+        display: block;
+    }
+}

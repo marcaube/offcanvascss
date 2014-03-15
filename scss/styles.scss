@@ -1,0 +1,25 @@
+@import "vendor/normalise";
+
+.oc-container {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.oc-menu {
+    text-align: center;
+    background-color: #48a770;
+
+    a {
+        padding: 1em;
+        color: #f3efe0;
+        text-decoration: none;
+        transition: background 0.3s
+    }
+
+    a:hover {
+        background-color: #2c774b;
+    }
+}
+
+@import "components/offcanvascss";
