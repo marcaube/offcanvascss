@@ -1,6 +1,9 @@
 @import "vendor/normalise";
 @import "components/offcanvascss";
 
+$green: #48a770;
+$white: #f3efe0;
+
 .oc-container {
     width: 100%;
     max-width: 960px;
@@ -8,7 +11,7 @@
 }
 
 .oc-menu__container {
-    background-color: #48a770;
+    background-color: $green;
 }
 
 .oc-menu {
@@ -23,18 +26,32 @@
     a {
         display: block;
         padding: 1em;
-        color: #f3efe0;
+        color: $white;
         text-decoration: none;
     }
 }
 
-.oc-content {
+.mobile-menu {
     padding: 1em;
+    background: darken($green, 15%);
+    text-align: right;
+}
+
+.mobile-menu__button {
+    padding: .3em .5em;
+    text-transform: uppercase;
+    color: $white;
+    background-color: $green;
+    border: 1px solid darken($green, 25%);
+}
+
+.oc-content__inner {
+    padding: 0 1em 1em;
 }
 
 
 @media (min-width: 769px) {
-    .js-menu {
+    .mobile-menu {
         display: none;
     }
 
