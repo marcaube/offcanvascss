@@ -12,7 +12,7 @@ body,
 
 .oc-content,
 .oc-menu__container {
-    overflow-y: scroll;                 // overflow-y removes momentum scrolling in Safari
+    overflow-y: auto;                   // overflow-y removes momentum scrolling in Safari
     -webkit-overflow-scrolling: touch;  // This puts it back
 }
 

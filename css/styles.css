@@ -362,7 +362,7 @@ body,
 
 .oc-content,
 .oc-menu__container {
-  overflow-y: scroll;
+  overflow-y: auto;
   -webkit-overflow-scrolling: touch; }
 
 .oc-container {
