@@ -48,3 +48,14 @@ body,
     -webkit-transition: -webkit-transform $open-transition;
             transition:         transform $open-transition;
 }
+
+.oc-menu-open .oc-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .25);
+    -webkit-transition: background $open-transition;
+            transition: background $open-transition;
+}
