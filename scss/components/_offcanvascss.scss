@@ -1,21 +1,50 @@
+$menu-width:        250px;
+$open-transition:   0.5s;
 
-
-/**
- * Equal-width navigation (http://jsfiddle.net/csswizardry/zfSt4/)
- */
-.oc-menu {
-    display: table;
-    margin:  0;
-    padding: 0;
-    width: 100%;
-    list-style: none;
-    table-layout: fixed;
+html,
+body,
+.oc-container,
+.oc-pusher,
+.oc-menu__container,
+.oc-content, {
+    height: 100%;
 }
 
-.oc-menu__item {
-    display: table-cell;
+.oc-content,
+.oc-menu__container {
+    overflow-y: scroll;                 // overflow-y removes momentum scrolling in Safari
+    -webkit-overflow-scrolling: touch;  // This puts it back
+}
 
-    a {
-        display: block;
-    }
+.oc-container {
+    overflow: hidden; // Prevents having two vertical scrollbars (container + content)
+}
+
+.oc-pusher {
+    -webkit-transition: -webkit-transform $open-transition;
+            transition:         transform $open-transition;
+}
+
+.oc-menu__container {
+    position: absolute;
+    width: $menu-width;
+    visibility: hidden;
+    -webkit-transition: all $open-transition;
+            transition: all $open-transition;
+}
+
+.oc-menu__container {
+    -webkit-transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
+}
+
+.oc-menu-open .oc-pusher {
+    -webkit-transform: translate3d($menu-width, 0, 0);
+            transform: translate3d($menu-width, 0, 0);
+}
+
+.oc-menu-open .oc-menu__container {
+    visibility: visible;
+    -webkit-transition: -webkit-transform $open-transition;
+            transition:         transform $open-transition;
 }

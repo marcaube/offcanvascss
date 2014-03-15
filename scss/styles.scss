@@ -1,4 +1,5 @@
 @import "vendor/normalise";
+@import "components/offcanvascss";
 
 .oc-container {
     width: 100%;
@@ -6,20 +7,71 @@
     margin: 0 auto;
 }
 
-.oc-menu {
-    text-align: center;
+.oc-menu__container {
     background-color: #48a770;
+}
 
+.oc-menu {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-transform: uppercase;
+    list-style-type: none;
+}
+
+.oc-menu__item {
     a {
+        display: block;
         padding: 1em;
         color: #f3efe0;
         text-decoration: none;
-        transition: background 0.3s
-    }
-
-    a:hover {
-        background-color: #2c774b;
     }
 }
 
-@import "components/offcanvascss";
+.oc-content {
+    padding: 1em;
+}
+
+
+@media (min-width: 769px) {
+    .js-menu {
+        display: none;
+    }
+
+    .oc-container,
+    .oc-pusher,
+    .oc-content,
+    .oc-content__inner,
+    .oc-menu__container {
+        height: auto;
+        width: auto;
+        overflow: auto;
+        visibility: visible;
+        -webkit-transform: translate3d(0, 0, 0) ;
+                transform: translate3d(0, 0, 0) ;
+    }
+
+    .oc-menu__container {
+        position: static;
+    }
+
+    /**
+     * Equal-width navigation (http://jsfiddle.net/csswizardry/zfSt4/)
+     */
+    .oc-menu {
+        display: table;
+        margin:  0;
+        padding: 0;
+        width: 100%;
+        list-style: none;
+        table-layout: fixed;
+    }
+
+    .oc-menu__item {
+        display: table-cell;
+
+        a {
+            display: block;
+        }
+    }
+}
