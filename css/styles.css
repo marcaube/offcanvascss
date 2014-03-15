@@ -429,6 +429,8 @@ body,
     width: auto;
     overflow: auto;
     visibility: visible;
+    -webkit-transition: all 0s;
+    transition: all 0s;
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0); }
 
